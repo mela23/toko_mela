@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'assets/config/class.php';
 $data_produk = $produk->tampil_produk();
 ?>
@@ -16,7 +16,7 @@ $data_produk = $produk->tampil_produk();
 <body>
 	<nav class="navbar navbar-default">
 		<div class="container">
-			<!-- mobile display -->
+			<!-- Tampilan pada mobile -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#naff" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
@@ -28,10 +28,10 @@ $data_produk = $produk->tampil_produk();
 			</div>
 			<div class="collapse navbar-collapse" id="naff">
 				<ul class="nav navbar-nav">
-					<?php 
-					if (isset($_SESSION['member'])) 
+					<?php
+					if (isset($_SESSION['member']))
 					{
-						
+
 						echo "<li><a href='index.php?halaman=checkout'>Checkout</a></li>";
 					}
 					?>
@@ -42,7 +42,7 @@ $data_produk = $produk->tampil_produk();
 						<input type="text" class="form-control" placeholder="Cari produk" name="keyword">
 					</div>
 				</form>
-				<?php 
+				<?php
 				if(isset($_POST ['keyword']))
 				{
 					echo "<script>location='index.php?halaman=cari_produk&keyword=$_POST[keyword]';</script>";
@@ -53,7 +53,7 @@ $data_produk = $produk->tampil_produk();
 						<a href="index.php?halaman=keranjang">
 							<i class="fa fa-shopping-cart fa-lg"></i>
 							<i class="badge">
-								<?php 
+								<?php
 								if (isset($_SESSION['keranjang']))
 								{
 									echo count($_SESSION['keranjang']);
@@ -66,8 +66,8 @@ $data_produk = $produk->tampil_produk();
 							</i>
 						</a>
 					</li>
-					<?php 
-					if (isset($_SESSION['member'])) 
+					<?php
+					if (isset($_SESSION['member']))
 					{
 						echo "<li><a href='index.php?halaman=logout'>Logout</a></li>";
 						?>
@@ -84,10 +84,10 @@ $data_produk = $produk->tampil_produk();
 								<li role="separator" class="divider"></li>
 							</ul>
 						</li>
-						
+
 						<?php
 					}
-					else 
+					else
 					{
 						echo"<li><a href='index.php?halaman=login'>Login</a></li>";
 						echo "<li><a href='index.php?halaman=daftar'>Daftar</a></li>";
@@ -97,8 +97,8 @@ $data_produk = $produk->tampil_produk();
 			</div>
 		</div>
 	</nav>
-	
-	<?php 
+
+	<?php
 	if(!isset($_GET['halaman']))
 	{
 		include 'home.php';
@@ -149,7 +149,7 @@ $data_produk = $produk->tampil_produk();
 		elseif ($_GET['halaman'] == 'member')
 		{
 			include 'member/member.php';
-		}	
+		}
 		elseif ($_GET['halaman'] == 'pembelian')
 		{
 			include 'member/pembelian.php';
@@ -172,7 +172,7 @@ $data_produk = $produk->tampil_produk();
 		}
 	}
 
-	?>		
+	?>
 
 	<hr>
 	<footer>
