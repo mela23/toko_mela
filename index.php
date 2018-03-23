@@ -43,6 +43,7 @@ $data_produk = $produk->tampil_produk();
 					</div>
 				</form>
 				<?php
+				// jika ada yang mencari produk
 				if(isset($_POST ['keyword']))
 				{
 					echo "<script>location='index.php?halaman=cari_produk&keyword=$_POST[keyword]';</script>";
@@ -67,6 +68,7 @@ $data_produk = $produk->tampil_produk();
 						</a>
 					</li>
 					<?php
+					// jika ada session member
 					if (isset($_SESSION['member']))
 					{
 						echo "<li><a href='index.php?halaman=logout'>Logout</a></li>";
