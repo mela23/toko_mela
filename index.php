@@ -179,7 +179,7 @@ $data_produk = $produk->tampil_produk();
 	<hr>
 	<footer>
 		<div class="container text-center">
-			<p> Copyright &copy; <strong>Inaya Melani Putri Alisa</strong>. All Right Reserved</p>
+			<p><strong>Inaya Melani Putri Alisa</strong></p>
 		</div>
 	</footer>
 	<script src="assets/ajax/jquery.min.js"></script>
